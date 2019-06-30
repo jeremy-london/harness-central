@@ -2,29 +2,34 @@
 import { GraphQLString, GraphQLInt } from 'graphql';
 
 // App Imports
-import ThoughtType from '../type';
+import UserType from '../type';
 import { create, remove } from '../resolvers';
 
-// Thought create
-export const thoughtCreate = {
-  type: ThoughtType,
+// User create
+export const userCreate = {
+  type: UserType,
   args: {
-    name: {
-      name: 'name',
+    firstName: {
+      name: 'firstName',
       type: GraphQLString,
     },
 
-    thought: {
-      name: 'thought',
+    lastName: {
+      name: 'lastName',
+      type: GraphQLString,
+    },
+
+    email: {
+      name: 'email',
       type: GraphQLString,
     },
   },
   resolve: create,
 };
 
-// Thought remove
-export const thoughtRemove = {
-  type: ThoughtType,
+// User remove
+export const userRemove = {
+  type: UserType,
   args: {
     id: {
       name: 'id',

@@ -9,7 +9,8 @@ import {store} from './setup/store'
 import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 
-console.log(store.getState())
+
+console.log("Redux Store", store.getState())
 
 // Render App
 ReactDOM.render(

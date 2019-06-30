@@ -10,6 +10,9 @@ import About from './home/About'
 import ThoughtsList from './thoughts/List'
 import ThoughtsCreate from './thoughts/Create'
 import ThoughtsView from './thoughts/View'
+import UsersList from './users/List'
+import UsersCreate from './users/Create'
+import UsersView from './users/View'
 
 // Component
 const App = () => (
@@ -23,6 +26,11 @@ const App = () => (
       <Route path={routes.thoughts.list} component={ThoughtsList} exact/>
       <Route path={routes.thoughts.create} component={ThoughtsCreate}/>
       <Route path={routes.thoughts.view(':id')} component={ThoughtsView}/>
+
+      {/* Users */}
+      <Route path={routes.users.list} component={UsersList} exact/>
+      <Route path={routes.users.create} component={UsersCreate}/>
+      <Route path={routes.users.view(':id')} component={UsersView}/>
     </Switch>
   </Layout>
 )

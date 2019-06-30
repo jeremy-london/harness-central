@@ -1,20 +1,21 @@
 // Imports
-import Sequelize from 'sequelize'
+import Sequelize from 'sequelize';
 
 // App Imports
-import databaseConnection from '../setup/databaseConnection'
+import databaseConnection from '../setup/databaseConnection';
 
 const models = {
-  Thought: databaseConnection.import('./thought')
-}
+  Thought: databaseConnection.import('./thought'),
+  User: databaseConnection.import('./user'),
+};
 
-Object.keys(models).forEach((modelName) => {
+Object.keys(models).forEach(modelName => {
   if ('associate' in models[modelName]) {
-    models[modelName].associate(models)
+    models[modelName].associate(models);
   }
-})
+});
 
-models.sequelize = databaseConnection
-models.Sequelize = Sequelize
+models.sequelize = databaseConnection;
+models.Sequelize = Sequelize;
 
-export default models
+export default models;

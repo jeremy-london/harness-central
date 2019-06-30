@@ -1,18 +1,19 @@
 // Imports
 import { GraphQLObjectType, GraphQLString, GraphQLInt } from 'graphql';
 
-// Thought type
-const ThoughtType = new GraphQLObjectType({
-  name: 'thought',
+// User type
+const UserType = new GraphQLObjectType({
+  name: 'user',
   description: '...',
 
   fields: () => ({
     id: { type: GraphQLInt },
-    name: { type: GraphQLString },
-    thought: { type: GraphQLString },
+    firstName: { type: GraphQLString },
+    lastName: { type: GraphQLString },
+    email: { type: GraphQLString },
     createdAt: { type: GraphQLString },
     updatedAt: { type: GraphQLString },
   }),
 });
 
-export default ThoughtType;
+export default UserType;

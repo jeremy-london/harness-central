@@ -13,7 +13,17 @@ export const routes = {
     create: '/thoughts/create',
 
     view: (id) => {
-      return `/thought/${ id }`
+      return `/thoughts/${ id }`
+    }
+  },
+
+  users: {
+    list: '/users',
+
+    create: '/users/create',
+
+    view: (id) => {
+      return `/user/${ id }`
     }
   },
 }
